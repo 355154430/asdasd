@@ -22,6 +22,8 @@ class A: UIViewController {
         ar = L3.text!;
         //a3 = ((ar) as NSString).DoubleValue
         a3 = ((ar) as NSString).doubleValue
+        a3 = a3+1;
+        
         //L3.text = L3.text ++;
         // L3.text = "" ((operand) as NSString).doubleValue
         //a3 = L3.text;
