@@ -11,15 +11,28 @@ var a3=0;
 var ar: String=""
 class A: UIViewController {
     
-    @IBOutlet weak var L1: UILabel!
-    @IBOutlet weak var L2: UILabel!
-    @IBOutlet weak var L3: UILabel!
-    @IBOutlet weak var L4: UILabel!
+    //@IBOutlet weak var L1: UILabel!
+    //@IBOutlet weak var L2: UILabel!
+    //@IBOutlet weak var L3: UILabel!
+    //@IBOutlet weak var L4: UILabel!
     @IBOutlet weak var L5: UILabel!
     @IBOutlet weak var L6: UILabel!
     //or = L3.text
+    @IBOutlet weak var t6: UITextField!
+    @IBOutlet weak var t5: UITextField!
+    @IBOutlet weak var t4: UITextField!
+    @IBOutlet weak var t3: UITextField!
     @IBAction func zuo1(sender: AnyObject) {
-        ar = L3.text!;
+        ar = "0";
+        ar = t3.text!;
+        a3 = ((ar) as NSString).intValue;
+        ar = ar + "1";
+        t3.text = "\(ar)";
+        //for(;;)
+        
+        //a3++;
+        //a3 = ((ar ) as NSString).intValue;
+        
     }
     //@IBAction func zuo(sender: UIButton) {
         
