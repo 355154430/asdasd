@@ -7,8 +7,10 @@
 //
 
 import UIKit
-var a3=0;
-var ar: String=""
+var a3: Double=0;
+var a4: Double=0;
+var ar1: String=""
+var ar2: String=""
 class A: UIViewController {
     
     //@IBOutlet weak var L1: UILabel!
@@ -23,16 +25,27 @@ class A: UIViewController {
     @IBOutlet weak var t4: UITextField!
     @IBOutlet weak var t3: UITextField!
     @IBAction func zuo1(sender: AnyObject) {
-        ar = "0";
-        ar = t3.text!;
-        a3 = ((ar) as NSString).intValue;
-        ar = ar + "1";
-        t3.text = "\(ar)";
+        ar1 = "0";
+        ar1 = t3.text!;
+        a3 = ((ar1) as NSString).doubleValue
+        //operand2=((operand) as NSString).doubleValue
+        a3 = a3 + 1;
+        //ar = (a3)as NSString
+        t3.text = "\(a3)";
         //for(;;)
         
         //a3++;
         //a3 = ((ar ) as NSString).intValue;
         
+    }
+    @IBAction func you2(sender: AnyObject) {
+        ar2 = "0";
+        ar2 = t4.text!;
+        a4 = ((ar2) as NSString).doubleValue
+        //operand2=((operand) as NSString).doubleValue
+        a4 = a4 + 1;
+        //ar = (a3)as NSString
+        t4.text = "\(a4)";
     }
     //@IBAction func zuo(sender: UIButton) {
         
