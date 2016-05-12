@@ -229,9 +229,6 @@
                                 <rect key="frame" x="137" y="378" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="guiling:" destination="8Of-Nk-8Ke" eventType="touchUpInside" id="6Qz-NJ-vV3"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="／" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OJg-d7-BjV">
                                 <rect key="frame" x="121" y="139" width="50" height="21"/>
@@ -250,8 +247,6 @@
                         <outlet property="t4" destination="Px7-Id-JSf" id="FKx-hP-SLw"/>
                         <outlet property="t5" destination="0U5-4H-qkr" id="ac3-Ls-wVp"/>
                         <outlet property="t6" destination="Uji-pU-uKa" id="GHb-s5-2c0"/>
-                        <outlet property="txtMobile" destination="ZVY-Wu-arh" id="9AF-6d-IWW"/>
-                        <outlet property="txtUname" destination="0U5-4H-qkr" id="1KT-US-pwy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOE-1Q-kUh" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -44,6 +44,10 @@ class A: UIViewController {
     @IBAction func saveClicked(sender: AnyObject) {
         saveUser()
     }
+    //@IBAction func guiling(sender: AnyObject) {
+        //t3.text = ""
+        //t5.text = ""
+    //}
     
     //从SQLite加载数据
     func initUser() {
@@ -52,16 +56,16 @@ class A: UIViewController {
             //获取最后一行数据显示
             let user = data[data.count - 1]
             txtUnamezuo.text = user["uname"] as? String
-            txtMobilezuo.text = user["mobile"] as? String
+            txtMobile.text = user["mobile"] as? String
         }
     }
     
     //保存数据到SQLite
     func saveUser() {
-        let uname = self.txtUnamezuo.text!
-        let mobile = self.txtMobilezuo.text!
+        let uname = self.txtUname.text!
+        let mobile = self.txtMobile.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_userzuo(unamezuo,mobilezuo) values('\(uname)','\(mobile)')"
+        let sql = "insert into t_user(uname,mobile) values('\(uname)','\(mobile)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
@@ -73,10 +77,7 @@ class A: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func guiling(sender: AnyObject) {
-        //let uname = NSNull
-        //let mobile =
-    }
+    
     @IBAction func zuo1(sender: AnyObject) {
         ar1 = "0";
         ar1 = t3.text!;
