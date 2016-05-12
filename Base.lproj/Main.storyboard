@@ -116,9 +116,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6W0-k4-MBO">
-                                <rect key="frame" x="191" y="485" width="46" height="30"/>
+                                <rect key="frame" x="191" y="485" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="开始使用 "/>
                                 <connections>
                                     <segue destination="8Of-Nk-8Ke" kind="modal" id="ZlA-6i-E5x"/>
                                 </connections>
@@ -187,6 +187,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="加分"/>
                                 <connections>
+                                    <action selector="saveClicked2:" destination="8Of-Nk-8Ke" eventType="touchUpInside" id="786-wT-bWf"/>
                                     <action selector="you2:" destination="8Of-Nk-8Ke" eventType="touchUpInside" id="2pX-Cz-YlJ"/>
                                 </connections>
                             </button>

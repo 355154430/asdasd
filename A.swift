@@ -16,6 +16,7 @@ var q1: Int = 0;
 var q2: Int = 0;
 var e1:String = "";
 var e2:String = "";
+var tx3:Int = 0;
 class A: UIViewController {
     
     var db:SQLiteDB!
@@ -40,6 +41,9 @@ class A: UIViewController {
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_user(uid integer primary key,uname1 varchar(20),mobile1 varchar(20))")
+        db = SQLiteDB.sharedInstance()
+        //如果表还不存在则创建表（其中uid为自增主键）
+        db.execute("create table if not exists t_user(uid integer primary key,uname2 varchar(20),mobile2 varchar(20))")
         //如果有数据则加载
         initUser()
     }
@@ -72,13 +76,32 @@ class A: UIViewController {
             t3.text = user["mobile1"] as? String
         }
     }
-    
+    @IBAction func saveClicked2(sender: AnyObject) {
+        saveUser2()
+    }
     //保存数据到SQLite
     func saveUser() {
         let uname1 = self.t5.text!
         let mobile1 = self.t3.text!
+       // tx3 = (t5.text).Int;
+        //tx3 = tx3+1;
+        
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
         let sql = "insert into t_user(uname1,mobile1) values('\(uname1)','\(mobile1)')"
+        print("sql: \(sql)")
+        //通过封装的方法执行sql
+        let result = db.execute(sql)
+        print(result)
+        //initUser()// Do any additional setup after loading the view, typically from a nib.
+    }
+    func saveUser2() {
+        let uname2 = self.t6.text!
+        let mobile2 = self.t4.text!
+        // tx3 = (t5.text).Int;
+        //tx3 = tx3+1;
+        
+        //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
+        let sql = "insert into t_user(uname2,mobile2) values('\(uname2)','\(mobile2)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
