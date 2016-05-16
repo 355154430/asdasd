@@ -41,6 +41,8 @@ class A: UIViewController {
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_user(uid integer primary key,uname1 varchar(20),mobile1 varchar(20))")
+        
+        
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_user(uid integer primary key,uname2 varchar(20),mobile2 varchar(20))")
@@ -48,17 +50,35 @@ class A: UIViewController {
         initUser()
     }
     
+    @IBAction func jh(sender: AnyObject) {
+        //t3.textColor = ;
+        navigationController?.hidesBarsOnTap = true
+        
+    }
     @IBAction func guiling(sender: AnyObject) {
         t5.text = ""
         t3.text = "0"
-        let uname1 = self.t5.text!
-        let mobile1 = self.t3.text!
+        let uname2 = self.t5.text!
+        let mobile2 = self.t3.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_user(uname1,mobile1) values('\(uname1)','\(mobile1)')"
-        print("sql: \(sql)")
+        let sql2 = "insert into t_user(uname2,mobile2) values('\(uname2)','\(mobile2)')"
+        print("sql2: \(sql2)")
         //通过封装的方法执行sql
-        let result = db.execute(sql)
+        let result = db.execute(sql2)
         print(result)
+        initUser();
+        
+        
+        t6.text = ""
+        t4.text = "0"
+        let uname1 = self.t6.text!
+        let mobile1 = self.t4.text!
+        //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
+        let sql1 = "insert into t_user(uname1,mobile1) values('\(uname1)','\(mobile1)')"
+        print("sql1: \(sql1)")
+        //通过封装的方法执行sql
+        let result1 = db.execute(sql1)
+        print(result1)
         initUser();
     }
     //点击保存
