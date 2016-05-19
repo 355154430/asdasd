@@ -29,7 +29,9 @@ class A: UIViewController {
     //@IBOutlet weak var L4: UILabel!
     @IBOutlet weak var L5: UITextField!
     @IBOutlet weak var L6: UITextField!
-    //or = L3.text
+    //or = L3.text////
+    @IBOutlet weak var t8: UITextField!
+    @IBOutlet weak var t7: UITextField!
     @IBOutlet weak var t6: UITextField!
     @IBOutlet weak var t5: UITextField!
     @IBOutlet weak var t4: UITextField!
@@ -51,15 +53,24 @@ class A: UIViewController {
     }
     
     @IBAction func jh(sender: AnyObject) {
-        //t3.textColor = ;
-        navigationController?.hidesBarsOnTap = true
+        //txtMobile.text = user["mobile"] as? String
+        //x1.textColor=UIColor.redColor()
+        //x1.backgroundColor=UIColor.yellowColor()
         
+        //t3.alpha =
+        
+        //t3.textColor = ;
+        //navigationController?.hidesBarsOnTap = true
+        //t3.didMoveToWindow()
+        //t3.window.
     }
     @IBAction func guiling(sender: AnyObject) {
         t5.text = ""
         t3.text = "0"
+        t7.text = "0"
         let uname2 = self.t5.text!
         let mobile2 = self.t3.text!
+        t7.text = t3.text
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
         let sql2 = "insert into t_user(uname2,mobile2) values('\(uname2)','\(mobile2)')"
         print("sql2: \(sql2)")
@@ -71,8 +82,10 @@ class A: UIViewController {
         
         t6.text = ""
         t4.text = "0"
+        t8.text = "0"
         let uname1 = self.t6.text!
         let mobile1 = self.t4.text!
+        t8.text = t4.text
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
         let sql1 = "insert into t_user(uname1,mobile1) values('\(uname1)','\(mobile1)')"
         print("sql1: \(sql1)")
@@ -94,6 +107,7 @@ class A: UIViewController {
             let user = data[data.count - 1]
             t5.text = user["uname1"] as? String
             t3.text = user["mobile1"] as? String
+            t7.text = t3.text
         }
     }
     @IBAction func saveClicked2(sender: AnyObject) {
@@ -103,6 +117,7 @@ class A: UIViewController {
     func saveUser() {
         let uname1 = self.t5.text!
         let mobile1 = self.t3.text!
+        t7.text = t3.text
        // tx3 = (t5.text).Int;
         //tx3 = tx3+1;
         
@@ -117,6 +132,7 @@ class A: UIViewController {
     func saveUser2() {
         let uname2 = self.t6.text!
         let mobile2 = self.t4.text!
+        t8.text = t4.text
         // tx3 = (t5.text).Int;
         //tx3 = tx3+1;
         
@@ -141,6 +157,7 @@ class A: UIViewController {
         e2 = L6.text! as String;
         ar1 = "0";
         ar1 = t3.text!;
+        t7.text = t3.text
         a3 = ((ar1) as NSString).doubleValue
         //operand2=((operand) as NSString).doubleValue
         a3 = a3 + 1;
@@ -166,6 +183,7 @@ class A: UIViewController {
         e2 = L6.text! as String;
         ar2 = "0";
         ar2 = t4.text!;
+        t8.text = t4.text
         a4 = ((ar2) as NSString).doubleValue
         //operand2=((operand) as NSString).doubleValue
         a4 = a4 + 1;
