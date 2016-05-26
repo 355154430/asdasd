@@ -1,23 +1,14 @@
-//
-//  A.swift
-//  asdasd
-//
-//  Created by King on 16/4/25.
-//  Copyright © 2016年 King. All rights reserved.
-//
-//import "sqlite3.h"
-//import <time.h>
 import UIKit
-var a3: Double=0;
-var a4: Double=0;
-var ar1: String=""
-var ar2: String=""
-var q1: Int = 0;
-var q2: Int = 0;
-var e1:String = "";
-var e2:String = "";
-var tx3:Int = 0;
-class A: UIViewController {
+var b3: Double=0;
+var b4: Double=0;
+var br1: String=""
+var br2: String=""
+var qb1: Int = 0;
+var qb2: Int = 0;
+var eb1:String = "";
+var eb2:String = "";
+var txb3:Int = 0;
+class B: UIViewController {
     
     var db:SQLiteDB!
     
@@ -154,7 +145,7 @@ class A: UIViewController {
     @IBAction func saveClicked(sender: AnyObject) {
         saveUser()
     }
-
+    
     //从SQLite加载数据
     func initUser() {
         let data = db.query("select * from t_user")
@@ -174,7 +165,7 @@ class A: UIViewController {
         let uname1 = self.t5.text!
         let mobile1 = self.t3.text!
         t7.text = t3.text
-       // tx3 = (t5.text).Int;
+        // tx3 = (t5.text).Int;
         //tx3 = tx3+1;
         
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
@@ -255,22 +246,22 @@ class A: UIViewController {
             L5.text = e2;
             L6.text = e1;
         }
-
+        
     }
     //@IBAction func zuo(sender: UIButton) {
-        
-      //  ar = L3.text!;
-        //a3 = ((ar) as NSString).DoubleValue
-        //a3 = ((ar) as NSString).IntValue
-        //a3++
-        //to string
-        
-        //L3.text = L3.text ++;
-        // L3.text = "" ((operand) as NSString).doubleValue
-        //a3 = L3.text;
-        //a3 = ((or) as NSString).IntValue
+    
+    //  ar = L3.text!;
+    //a3 = ((ar) as NSString).DoubleValue
+    //a3 = ((ar) as NSString).IntValue
+    //a3++
+    //to string
+    
+    //L3.text = L3.text ++;
+    // L3.text = "" ((operand) as NSString).doubleValue
+    //a3 = L3.text;
+    //a3 = ((or) as NSString).IntValue
     //}
-  
+    
     
     
 }

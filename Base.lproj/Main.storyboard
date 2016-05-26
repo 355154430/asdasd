@@ -256,15 +256,15 @@
                                     <action selector="you2:" destination="8Of-Nk-8Ke" eventType="touchUpInside" id="2pX-Cz-YlJ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Dl7-9S-xao">
-                                <rect key="frame" x="203" y="72" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="ccg-qx-VkY">
+                                <rect key="frame" x="25" y="72" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30155437709999999" green="0.81515470830000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="ccg-qx-VkY">
-                                <rect key="frame" x="25" y="72" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="Dl7-9S-xao">
+                                <rect key="frame" x="203" y="69" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.3603078462" blue="0.29992095880000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -276,6 +276,7 @@
                     <connections>
                         <outlet property="L5" destination="F86-5h-4Nb" id="tBc-6d-IIe"/>
                         <outlet property="L6" destination="d74-Du-PPx" id="vlR-3P-QrC"/>
+                        <outlet property="t10" destination="Dl7-9S-xao" id="bjq-Gl-VO0"/>
                         <outlet property="t3" destination="ZVY-Wu-arh" id="94e-1U-ldq"/>
                         <outlet property="t4" destination="Px7-Id-JSf" id="FKx-hP-SLw"/>
                         <outlet property="t5" destination="0U5-4H-qkr" id="ac3-Ls-wVp"/>
