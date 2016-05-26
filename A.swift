@@ -36,6 +36,7 @@ class A: UIViewController {
     @IBOutlet weak var t5: UITextField!
     @IBOutlet weak var t4: UITextField!
     @IBOutlet weak var t3: UITextField!
+    @IBOutlet weak var t9: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,6 +54,35 @@ class A: UIViewController {
     }
     
     @IBAction func jh(sender: AnyObject) {
+        //if(t7.alpha==0&t8.alpha==0&t3.alpha == 1&t4.alpha == 1){}
+        //t7.alpha = 1;
+        //t8.alpha = 1;
+        //t3.alpha = 0;
+        //t4.alpha = 0;
+        if(t7.alpha==0){
+            if(t8.alpha==0){
+                if(t3.alpha == 1){
+                    if(t4.alpha == 1){
+                        t7.alpha = 1;
+                        t8.alpha = 1;
+                        t3.alpha = 0;
+                        t4.alpha = 0;
+                    }
+                }
+            }
+        }
+        else if(t7.alpha==1){
+            if(t8.alpha==1){
+                if(t3.alpha == 0){
+                    if(t4.alpha == 0){
+                        t7.alpha = 0;
+                        t8.alpha = 0;
+                        t3.alpha = 1;
+                        t4.alpha = 1;
+                    }
+                }
+            }
+        }
         //txtMobile.text = user["mobile"] as? String
         //x1.textColor=UIColor.redColor()
         //x1.backgroundColor=UIColor.yellowColor()
@@ -98,7 +128,7 @@ class A: UIViewController {
     @IBAction func saveClicked(sender: AnyObject) {
         saveUser()
     }
-    
+
     //从SQLite加载数据
     func initUser() {
         let data = db.query("select * from t_user")
@@ -132,7 +162,10 @@ class A: UIViewController {
     func saveUser2() {
         let uname2 = self.t6.text!
         let mobile2 = self.t4.text!
-        t8.text = t4.text
+        //var x = 0;
+        //x = Int(t4.text!)!
+        //
+        t8.text = t4.text//"\(x)"
         // tx3 = (t5.text).Int;
         //tx3 = tx3+1;
         
