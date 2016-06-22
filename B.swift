@@ -18,6 +18,9 @@ class B: UIViewController {
     //@IBOutlet weak var L2: UILabel!
     //@IBOutlet weak var L3: UILabel!
     //@IBOutlet weak var L4: UILabel!
+   // @IBOutlet weak var L5: UITextField!
+    //@IBOutlet weak var L6: UITextField!
+    //@IBOutlet weak var L5: UILabel!
     @IBOutlet weak var L5: UITextField!
     @IBOutlet weak var L6: UITextField!
     //or = L3.text////
