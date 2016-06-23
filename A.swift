@@ -258,7 +258,7 @@ class A: UIViewController {
 
     }
     //@IBAction func zuo(sender: UIButton) {
-        
+        //
       //  ar = L3.text!;
         //a3 = ((ar) as NSString).DoubleValue
         //a3 = ((ar) as NSString).IntValue
